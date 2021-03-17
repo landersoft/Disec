@@ -10,8 +10,9 @@ class AdminEmpleado(admin.ModelAdmin):
 
 
 class AdminFalta_Atraso(admin.ModelAdmin):
+    list_display = ("empleado","tipo","fecha","motivo")
     list_filter = ["empleado"]
-    search_fields = ["empleado"]
+    search_fields = ["empleado__nombre","empleado__rut"]
     class Meta:
         model = Falta_Atraso
 

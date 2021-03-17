@@ -43,7 +43,7 @@ class Falta_Atraso(models.Model):
         verbose_name_plural = 'Faltas y/o atrasos'
 
         def __str__(self):
-            return str(self.id)
+            return self.tipo
 
 class Felicitaciones(models.Model):
     tipo = models.CharField(max_length=10)
